@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Check Document</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+	body{margin:0;}
+
+	ul{
+	list-style-type:none;
+	background-color:orange;
+	overflow:hidden;
+	margin:0;
+	font:14px Arial;
+	}
+
+	li{float:right}
+
+	li a{
+	display:block;
+	text-decoration:none;
+	color:black;
+	text-align:center;
+	padding:23px 20px;
+	}
+
+	li a:hover{
+	color:black;
+	background-color:#ed9121;
+	}
+
+	h1{
+	font:30px arial;
+	}
+
+	.button{
+	background-color:orange;
+	height:50px;
+	width:150px;
+	border-radius:30px;
+	border:none ;
+	font:14px arial;
+	}
+
+	.button:hover{
+	background-color:#ed9121;
+	}
+
+	.button:active{
+	transform: translateY(4px);
+	}
+
+	.greet{
+	font:14px arial;
+	text-align:right;
+	padding-top: 20px;
+	padding-right:20px;
+	}
+
+</style>
+</head>
+
+<body>
+
+	<ul>
+		<li><a href="{{url_for('orglogout')}}">Log Out</a></li>
+		<li style="float:left"><img src="{{url_for('static',filename='logo usim.png')}}" alt="Logo USIM" style="width:200px;height:30px;margin:15px 0px;"></li>
+    </ul>
+
+	<div class = 'greet'>
+		Welcome {{session.orgname}}! &#128075;
+	</div>
+
+	<div style='text-align: center;'>
+		<img src="{{url_for('static',filename='fail.png')}}" alt="fail icon" style='padding-top:145px;'></img>
+		<h1>Document not found</h1><br>
+		<a href="{{url_for('verifynow')}}"><button type="button" class="button">Back</button></a>
+	</div>
+
+</body>
+</html>
