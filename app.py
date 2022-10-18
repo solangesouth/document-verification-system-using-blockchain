@@ -16,7 +16,7 @@ print(w3.isConnected())
 
 contract_address = Web3.toChecksumAddress('0xb04F7A9910b21fA707f1d39A55c4A9AC389F0ECB')
 
-key='0x16676be3a2cf4626183ef4cf7909b26b1d2b21df50033aa8d5f6836e90fe989c'
+key='insert your private key'
 account_address = Web3.toChecksumAddress('0x81676973515a3e1e4BE74923b1b0c001844f3aa6')
 w3.eth.defaultAccount = account_address
 
